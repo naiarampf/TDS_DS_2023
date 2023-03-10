@@ -1,0 +1,192 @@
+:root{
+    --COR-PRETO: #22242a;
+    --COR-BRANCA: #fff;
+
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto" , sans-serif;
+}
+
+header{
+    background-color: #22242a;
+    width: 100%;
+    height: 30px;
+    padding: 20px;
+    position: fixed;    
+}
+
+.area-esquerda h3{
+    color: var(--COR-BRANCA);
+    margin: 0;
+    font-size: 22;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.bnt-sair{
+    color: var(--COR-BRANCA);
+    text-decoration: none;
+    float: right;
+    margin-right: 40px;
+    margin-top:  -30px;
+    background-color: #19b3d3;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 5px 5px;
+    transition-delay: 0.5;
+    transition: 0.5s;           
+}
+
+.bnt-sair:hover{
+    background-color: #0D9DBB;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.Perfil{
+    text-align: center;
+}
+
+.imagem-Perfil{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+nav{
+    background-color: #2f323a;
+    width: 250px;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    margin-top: 70px;
+    padding-top: 30px;
+
+}
+
+nav h4{
+    color: var(--COR-BRANCA);
+    margin-top: 0;
+    margin-bottom: 20px;
+    
+}
+
+nav a{
+    color: var(--COR-BRANCA);
+    text-decoration: none;
+    display: block;
+    padding-left: 40px;
+    line-height: 80px;
+    box-sizing: border-box;
+
+}
+
+nav i{
+    margin-right: 10px;
+}
+
+nav a:hover{
+    background-color: #0D9DBB;
+    transition: 0.5s;
+
+}
+
+#btnMenu{
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    position: fixed;
+    left: 250px;
+    top: 23px;
+
+}
+
+#chkMenu{
+    display: none;
+}
+
+#chkMenu:checked~nav{
+    left: -190px;   
+}
+
+#chkMenu:checked~nav a{
+    font-size: 22px;
+    margin-left: 165px;
+}
+
+#chkMenu:checked~nav a span{
+    display: none;
+    transition-delay: 5.8s;
+}
+
+.conteudo{
+    background-image: url('https://wallpaperaccess.com/full/3909847.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Perfil-Curriculum{
+    text-align: center;
+    
+}
+
+.Foto{
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    margin-top: 0%;
+}
+
+.meu-cabecalho {
+   width: auto;
+}
+
+h1 {
+    padding-top: 200px;
+    text-align: center;
+    margin: 0px;
+    position: relative;
+    left: 1em;
+    bottom: 4em;
+    font-weight: bold;
+    font-size: 25px;
+}
+.container-conteudo {
+    text-align: center;
+    line-height: 1em;
+    width: auto;
+}
+h2 {
+    font-weight: bold;
+    margin: 20px 0 0  0 ;
+}
+li p {
+    line-height: 2em;
+}
+.container-contato {
+    margin: 0 0 0 10px ;
+    text-align: center;
+}
+
+footer {
+    background: var(--COR-BRANCA);
+    width: auto;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    padding: 50px 0 100px 0;
+}
+
+.inicio{
+   margin-top: 0px; 
+}
