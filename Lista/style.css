@@ -1,0 +1,13 @@
+.checked{
+    text-decoration: line-through;
+    color: aqua;
+
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    text-align: center;
+ }
