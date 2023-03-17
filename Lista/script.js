@@ -1,13 +1,23 @@
 const input = window.document.getElementById("input");
 const ul = window.document.querySelector("ul");
-function adicionar() {
+const db_lista_li = JSON.parse(window.localStorage.getItem("lista"));
+
+db_lista_li.forEach((item) => adicionar(item));
+
+function adicionar(item) {
   var li = window.document.createElement("li");
-  var value = input.value;
+  var value = item ? item.texto : input.value;
+
   var value_li = window.document.createTextNode(value);
 
-  if (input.value.trim() !== "") {
+  if (input.value.trim() !== "" || item) {
   li.appendChild(value_li);
   ul.appendChild(li);
+}
+
+if (!item) {
+adiciona_lista();
+
 }
 
   input.value = "";
@@ -36,6 +46,18 @@ window
         e.target.remove();
        }
     })
+
+    function adiciona_lista() {
+      const lista_de_li = window.document.querySelectorAll("li");
+      const lista = [];
+      lista_de_li.forEach((item) => {
+        lista.push({ texto : item.innerText });
+      });
+      
+      window.localStorage.setItem("lista", JSON.stringify(lista));
+    }
+
+    
 
 
 
