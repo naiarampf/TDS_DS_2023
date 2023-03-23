@@ -1,0 +1,43 @@
+.checked{
+    text-decoration: line-through;
+    color: black;
+
+}
+
+ul{
+    list-style: none;
+    padding-right: 80px;
+}
+
+body{
+    padding-top: 120px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    background-color: rgb(198, 205, 225);
+ }
+
+ li:hover{
+    font-size: 18px;
+    transition: 0.3s;
+    cursor: pointer;
+ }
+
+ button:hover{
+    font-size: 16px;
+    transition: 0.3s;
+    cursor: pointer;
+
+ }
+
+ button{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(193, 181, 213);
+    border-radius: 5px;
+ }
+
+ input{
+    padding: 4px;
+ }
+
+ 
+
