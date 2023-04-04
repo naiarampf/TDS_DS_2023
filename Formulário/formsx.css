@@ -1,5 +1,5 @@
 
-.container_form {
+head {
 
     width: 65%;
     margin: auto;
@@ -12,14 +12,25 @@
 
 }
 
-.container_form h1 {
+h1 {
     font-family:Arial, Helvetica, sans-serif;
     font-size: 38px;
     color:#0178AA;
     border-bottom: 1px #f0eded solid;
     margin-bottom: 10px;
     padding-bottom: 10px;
+    flex: 1;
 
+}
+
+body{
+    width: 70%;
+    padding-left: 15%;   
+}
+
+img{
+    max-width: 30%;
+    margin-left: 10px;
 }
 
 .form_grupo {
@@ -207,11 +218,6 @@
     align-items: center;
 }
 
-h1{
-    flex: 1;
-}
 
-img{
-    max-width: 30%;
-    margin-left: 10px;
-}
+
+
