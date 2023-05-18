@@ -4,12 +4,11 @@ module.exports = {
   buscaTodos: async (req, res) => {
     const data = await funcionariosRepository
       .buscaTodos()
-      .then((data) => data)
+      .then((result) => result)
       .catch((error) => {
         res.status(500).send(error);
       });
-
-      res.render("funcionarios", {data});
+    res.render("funcionarios", { data });
   },
   buscaPorId: (req, res) => {
     const { id } = req.params;

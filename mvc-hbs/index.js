@@ -6,15 +6,33 @@ const app = express();
 
 app.use(express.json());
 
-hbs.registerPartials(__dirname + "/views");
-
+hbs.registerPartials(`${__dirname}/views`);
 app.set("view engine", "hbs");
 app.set("view options", {
-  layout: "layouts/default", 
+  layout: "layouts/default",
 });
+
+app.use(express.static("public"));
 
 app.use(routes);
 
+hbs.registerHelper("formataCPF", (data) => {
+    return data
+      .replace(/[^\d]/g, "")
+      .replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+  });
+
+  hbs.registerHelper("formataDataNsc", (data) => {
+    const dataCompleta = new Date (data);
+    const dia = String(dataCompleta.getDay()).padStart(2, "0");
+    const mes = String(dataCompleta.getMonth() + 1).padStart(2, "0");
+    const ano = dataCompleta.getFullYear();
+    return `${dia}/${mes}/${ano}`;
+  });
+
+  hbs.registerHelper("formataTelefone", (data) => {
+    return data.replace(/(\d{2})(\d{1})(\d{4})(\d{4})/, "($1) $2 $3-$4");
+  });
 
 app.listen(8080, (error) => {
   if (error) {
